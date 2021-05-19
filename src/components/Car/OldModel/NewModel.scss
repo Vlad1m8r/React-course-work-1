@@ -1,0 +1,38 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__search{
+    margin-top: 10px;
+    color: white;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-around;
+  }
+}
+
+.search-in {
+  color: white;
+}
+
+//.btn {
+//  align-self: center;
+//  width: 150px;
+//  height: 50px;
+//  border-radius: 10px;
+//  text-align: center;
+//  color: black;
+//  background-color: #a758d7;
+//  border-style: none;
+//  text-decoration: none;
+//}
+//
+//.btn:hover{
+//  background-color: #c862fe;
+//  font-weight: bold;
+//}
+

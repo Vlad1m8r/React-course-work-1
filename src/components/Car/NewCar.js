@@ -6,21 +6,27 @@ import "../../scss/AddBtn.scss"
 import {history} from "../../index";
 import Button from '@material-ui/core/Button';
 import MUIDataTable from "mui-datatables";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControl from "@material-ui/core/FormControl";
+
 
 
 class Cars extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {}
+        this.state = {
+            data: []
+        }
     }
 
     componentWillMount() {
-        this.props.onFetch() ///Must have
+        this.props.onFetch()
+        this.props.cars.map(car => {
+            this.state.data.push([car.id,car.carVIN, car.carNumber, car.carModel, car.carMake,
+                <div>
+                    <button className="btn def">Редактировать</button>
+                    <button className="btn den">Блокировать</button>
+                </div>])
+        })
     }
 
     handleEdit(car) {
@@ -33,23 +39,38 @@ class Cars extends React.Component {
         })
     }
 
+
     render() {
 
-        const columns = ["Номер", "Модель", "Производитель"];
+        const columns = ["ID", "VIN номер", "Номер", "Модель", "Производитель", ""];
+
         const options = {
             textLabels: {
                 toolbar: {
                     search: "Search",
-                    // downloadCsv: "Download CSV",
-                    // print: "Print",
                     viewColumns: "View Columns",
                     filterTable: "Filter Table"
                 }
-                },
-            filter: true,
+            },
+            selectableRowsHideCheckboxes: true,
+            tableBodyHeight: "350px",
+            filter: false,
+            rowsPerPage: 5,
+            viewColumns: false,
+            rowsPerPageOptions: [5, 10, 15],
+            download: false,
+            print: false,
             filterType: "dropdown",
+            responsive: "vertical",
         };
 
+
+        if (this.props.isLoading) {
+            return (
+                <div>Loading</div>
+            )
+        }
+        else
         return (
             <div className={"main"}>
                 <div className="content">
@@ -67,62 +88,11 @@ class Cars extends React.Component {
                     </div>
 
                     <MUIDataTable
-                        title={"ACME Employee list"}
-                        data={data}
+                        data={this.state.data}
                         columns={columns}
                         options={options}
                     />
-
-                    {/*<table>*/}
-                    {/*    <thead>*/}
-                    {/*    <tr>*/}
-                    {/*        <th onClick={() => this.props.sortById(this.props.sortByIdBool)}>#</th>*/}
-                    {/*        /!*<th>VIN номер</th>*!/*/}
-                    {/*        <th>Номер</th>*/}
-                    {/*        <th>Модель</th>*/}
-                    {/*        <th>Производитель</th>*/}
-                    {/*        <th>Цена</th>*/}
-                    {/*        <th>Цена за сутки</th>*/}
-                    {/*        <th>Цвет</th>*/}
-                    {/*        <th>Год выпуска</th>*/}
-                    {/*        <th>Тип</th>*/}
-                    {/*        <th>Действие</th>*/}
-                    {/*    </tr>*/}
-                    {/*    </thead>*/}
-                    {/*    <tbody>*/}
-                    {/*    {*/}
-                    {/*        this.props.cars.map(*/}
-                    {/*            (car) =>*/}
-                    {/*                <tr key={car.id}>*/}
-
-                    {/*                    <td>{car.id}</td>*/}
-                    {/*                    /!*<td>{car.carVIN}</td>*!/*/}
-                    {/*                    <td>{car.carNumber}</td>*/}
-                    {/*                    <td>{car.carModel}</td>*/}
-                    {/*                    <td>{car.carMake}</td>*/}
-                    {/*                    <td>{car.cost}</td>*/}
-                    {/*                    <td>{car.costOnDay}</td>*/}
-                    {/*                    <td>{car.carColor}</td>*/}
-                    {/*                    <td>{car.carModelYear}</td>*/}
-                    {/*                    <td>{car.type}</td>*/}
-                    {/*                    <td>*/}
-                    {/*                        <div className="btn">*/}
-                    {/*                            <button className="btn__danger"*/}
-                    {/*                                    onClick={() => this.props.onDelete(car.id)}>*/}
-                    {/*                                Удалить*/}
-                    {/*                            </button>*/}
-                    {/*                            <button className="btn__default"*/}
-                    {/*                                    onClick={() => this.handleEdit(car)}>*/}
-                    {/*                                Изменить*/}
-                    {/*                            </button>*/}
-                    {/*                        </div>*/}
-                    {/*                    </td>*/}
-                    {/*                </tr>*/}
-                    {/*        )*/}
-                    {/*    }*/}
-                    {/*    </tbody>*/}
-                    {/*</table>*/}
-
+                    <btn className="btn-add">Добавить</btn>
 
                 </div>
             </div>

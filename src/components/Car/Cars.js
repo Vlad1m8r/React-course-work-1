@@ -32,18 +32,6 @@ class Cars extends React.Component {
         return (
             <div className={"main"}>
                 <div className="content">
-                    <div className="content__actions">
-                        <div className="content__actions__btn">
-                            <Button
-                                size="large"
-                                variant="contained"
-                                className="btn__add"
-                                color={"primary"}
-                                onClick={() => history.push('/create')}>
-                                Добавить
-                            </Button>
-                        </div>
-                    </div>
                     <table>
                         <thead>
                         <tr>
@@ -57,7 +45,16 @@ class Cars extends React.Component {
                             <th>Цвет</th>
                             <th>Год выпуска</th>
                             <th>Тип</th>
-                            <th>Действие</th>
+                            <th>
+                                <Button
+                                    size="large"
+                                    variant="contained"
+                                    className="btn__add"
+                                    color={"primary"}
+                                    onClick={() => history.push('/create')}>
+                                    Добавить
+                                </Button>
+                            </th>
                         </tr>
                         </thead>
                         <tbody>

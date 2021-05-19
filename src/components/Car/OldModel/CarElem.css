@@ -1,0 +1,12 @@
+.car-elem {
+  display: flex;
+  flex-direction: row;
+  background-color: #493a5b;
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+  border-radius: 15px;
+  color: white;
+}
+
+/*# sourceMappingURL=CarElem.css.map */

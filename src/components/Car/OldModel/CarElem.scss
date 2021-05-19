@@ -1,0 +1,101 @@
+.car-elem {
+  display: flex;
+  flex-direction: row;
+  background-color: #493a5b;
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+  border-radius: 15px;
+  color: white;
+}
+//.car-elem .image {
+//  display: flex;
+//  width: 200px;
+//  height: 100%;
+//  justify-content: center;
+//  align-items: center;
+//}
+//.car-elem .image img {
+//  width: 180px;
+//  height: 280px;
+//  /*background-size: contain;*/
+//  margin: 20px;
+//}
+//.car-elem .car-info {
+//  width: 400px;
+//  display: flex;
+//  flex-direction: column;
+//  margin: 20px;
+//  justify-content: space-between;
+//}
+//
+//.car-elem .car-info .row{
+//  display: flex;
+//  flex-direction: row;
+//  justify-content: flex-start;
+//  margin-left: 30px;
+//}
+//
+//.car-name {
+//  font-size: 26px;
+//  font-weight: bold;
+//  /*color: white;*/
+//  text-align: center;
+//}
+//
+//.car-genre, .car-age, .car-rate, .car-release {
+//  font-weight: bold;
+//  margin-left: 15px;
+//  /*color: white;*/
+//}
+//
+//.btn {
+//  align-self: center;
+//  width: 300px;
+//  height: 30px;
+//  border-radius: 10px;
+//  text-align: center;
+//  color: black;
+//  background-color: #a758d7;
+//  border-style: none;
+//  text-decoration: none;
+//}
+//
+//.btn:hover{
+//  background-color: #c862fe;
+//  font-weight: bold;
+//}
+//
+//.btn-def {
+//  align-self: center;
+//  width: 300px;
+//  height: 30px;
+//  border-radius: 10px;
+//  text-align: center;
+//  color: black;
+//  background-color: aqua;
+//  border-style: none;
+//  text-decoration: none;
+//}
+//
+//.btn-def:hover{
+//  background-color: aquamarine;
+//  font-weight: bold;
+//}
+//
+//.btn-dan {
+//  align-self: center;
+//  width: 300px;
+//  height: 30px;
+//  border-radius: 10px;
+//  text-align: center;
+//  color: black;
+//  background-color: crimson;
+//  border-style: none;
+//  text-decoration: none;
+//}
+//
+//.btn-dan:hover{
+//  background-color: darkred;
+//  font-weight: bold;
+//}

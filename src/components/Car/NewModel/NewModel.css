@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__search {
+  margin-top: 10px;
+  color: white;
+}
+.main__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-in {
+  color: white;
+}
+
+/*# sourceMappingURL=NewModel.css.map */
