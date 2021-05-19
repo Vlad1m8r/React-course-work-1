@@ -44,7 +44,7 @@ class Dealers extends React.Component {
                                     variant="contained"
                                     className="btn__add"
                                     color={"primary"}
-                                    onClick={() => history.push('/dealers/create')}>
+                                    onClick={() => history.push('/dealer/create')}>
                                     Добавить
                                 </Button>
                             </th>

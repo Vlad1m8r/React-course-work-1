@@ -49,8 +49,8 @@ class Contracts extends React.Component {
 
                                 <th onClick={() => this.props.sortById(this.props.sortByIdBool)}>#</th>
                                 <th>Номер договора</th>
-                                <th>Дата выезда</th>
-                                <th>Дата заезда</th>
+                                <th>Дата</th>
+                                {/*<th>Дата заезда</th>*/}
                                 <th>Код клиента</th>
                                 <th>Код машины</th>
                                 <th>
@@ -74,7 +74,7 @@ class Contracts extends React.Component {
                                             <td>{contract.id}</td>
                                             <td>{contract.number}</td>
                                             <td>{contract.dateStart}</td>
-                                            <td>{contract.dateEnd}</td>
+                                            {/*<td>{contract.dateEnd}</td>*/}
                                             <td>{contract.client?.id}</td>
                                             <td>{contract.car?.id}</td>
                                             <td>

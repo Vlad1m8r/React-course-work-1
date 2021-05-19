@@ -72,7 +72,7 @@ class CreateDealer extends React.Component {
                     <Grid container spacing={2} justify={"center"}>
                         <Grid item xs={12} md={12} lg={12}>
                             <TextField onChange={this.handleOnValueChange.bind(this)} id="phone"
-                                       value={this.state.firstName}
+                                       value={this.state.phone}
                                        type="text"
                                        variant="outlined" label="Номер телефона"
                                        fullWidth
@@ -83,7 +83,7 @@ class CreateDealer extends React.Component {
                         </Grid>
                         <Grid item xs={12} md={12} lg={12}>
                             <TextField onChange={this.handleOnValueChange.bind(this)} id="address"
-                                       value={this.state.lastName}
+                                       value={this.state.address}
                                        type="text"
                                        variant="outlined" label="Адресс"
                                        fullWidth
@@ -94,7 +94,7 @@ class CreateDealer extends React.Component {
                         </Grid>
                         <Grid item xs={12} md={12} lg={12}>
                             <TextField onChange={this.handleOnValueChange.bind(this)} id="city"
-                                       value={this.state.phoneNumber}
+                                       value={this.state.city}
                                        type="text"
                                        variant="outlined" label="Город"
                                        fullWidth

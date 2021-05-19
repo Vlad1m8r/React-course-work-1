@@ -15,8 +15,8 @@ class CreateCar extends React.Component {
         super(props);
 
         this.state = {
-            carVIN: null,
-            carNumber: null,
+            carVIN: "12341234",
+            carNumber: "21341234",
             carModel: null,
             carMake: null,
             cost: null,
@@ -52,8 +52,8 @@ class CreateCar extends React.Component {
         e.preventDefault()
         history.push({pathname: "/"})
         this.setState({
-            carVIN: null,
-            carNumber: null,
+            carVIN: "1341234",
+            carNumber: "12342134",
             carModel: null,
             carMake: null,
             cost: null,
@@ -76,8 +76,8 @@ class CreateCar extends React.Component {
         e.preventDefault();
         debugger
         if (
-            this.state.carVIN === null || this.state.carVIN === "" ||
-            this.state.carNumber === null || this.state.carNumber === "" ||
+            // this.state.carVIN === null || this.state.carVIN === "" ||
+            // this.state.carNumber === null || this.state.carNumber === "" ||
             this.state.carModel === null || this.state.carModel === "" ||
             this.state.carMake === null || this.state.carMake === "" ||
             this.state.cost === null || this.state.cost === "" ||
@@ -95,28 +95,28 @@ class CreateCar extends React.Component {
             <div className={"content"}>
                 <form className="content__create-form" onSubmit={this.handleSubmit.bind(this)}>
                     <Grid container spacing={2} justify={"center"}>
-                        <Grid item xs={12} md={12} lg={12}>
-                            <TextField onChange={this.handleOnValueChange.bind(this)} id="carVIN"
-                                       value={this.state.carVIN}
-                                       type="text"
-                                       variant="outlined" label="VIN номер"
-                                       fullWidth
-                                       InputLabelProps={{
-                                           shrink: true,
-                                       }}
-                            />
-                        </Grid>
-                        <Grid item xs={12} md={12} lg={12}>
-                            <TextField onChange={this.handleOnValueChange.bind(this)} id="carNumber"
-                                       value={this.state.carNumber}
-                                       type="text"
-                                       variant="outlined" label="Номер"
-                                       fullWidth
-                                       InputLabelProps={{
-                                           shrink: true,
-                                       }}
-                            />
-                        </Grid>
+                        {/*<Grid item xs={12} md={12} lg={12}>*/}
+                        {/*    <TextField onChange={this.handleOnValueChange.bind(this)} id="carVIN"*/}
+                        {/*               value={this.state.carVIN}*/}
+                        {/*               type="text"*/}
+                        {/*               variant="outlined" label="VIN номер"*/}
+                        {/*               fullWidth*/}
+                        {/*               InputLabelProps={{*/}
+                        {/*                   shrink: true,*/}
+                        {/*               }}*/}
+                        {/*    />*/}
+                        {/*</Grid>*/}
+                        {/*<Grid item xs={12} md={12} lg={12}>*/}
+                        {/*    <TextField onChange={this.handleOnValueChange.bind(this)} id="carNumber"*/}
+                        {/*               value={this.state.carNumber}*/}
+                        {/*               type="text"*/}
+                        {/*               variant="outlined" label="Номер"*/}
+                        {/*               fullWidth*/}
+                        {/*               InputLabelProps={{*/}
+                        {/*                   shrink: true,*/}
+                        {/*               }}*/}
+                        {/*    />*/}
+                        {/*</Grid>*/}
                         <Grid item xs={12} md={12} lg={12}>
                             <TextField onChange={this.handleOnValueChange.bind(this)} id="carModel"
                                        value={this.state.carModel}

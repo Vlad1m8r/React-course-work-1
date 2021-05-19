@@ -61,7 +61,7 @@ export const createDealer = (dealer) => {
                 .then(response => {
 
                     dispatch(createDealerSuccess(response.data))
-                    history.push('/')
+                    history.push('/dealer')
 
                 }).catch(error => {
                     console.log(error)

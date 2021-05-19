@@ -39,13 +39,17 @@ class Report extends React.Component {
             row.push(<td>{contract.number}</td>)
             row.push(<td>{contract.client.firstName} {contract.client.lastName}</td>)
             row.push(<td>{contract.dateStart}</td>)
-            row.push(<td>{contract.dateEnd}</td>)
-            row.push(<td>{days}</td>)
+            // row.push(<td>{contract.dateEnd}</td>)
+            // row.push(<td>{days}</td>)
             row.push(<td>{contract.car.cost}</td>)
-            row.push(<td>{contract.car.cost*days}</td>)
+            // row.push(<td>{contract.car.cost*days}</td>)
             // row.push(<td>{contract.car.carVIN}</td>)
-            row.push(<td>{contract.car.carNumber}</td>)
-            // row.push(<td>{contract.car.carModel}</td>)
+            // row.push(<td>{contract.car.carNumber}</td>)
+            row.push(<td>{contract.car.carModel}</td>)
+            row.push(<td>{contract.car.carMake}</td>)
+            row.push(<td>{contract.car.carColor}</td>)
+            row.push(<td>{contract.car.carModelYear}</td>)
+            row.push(<td>{contract.car.type}</td>)
             return (<tr>{row}</tr>)
         }
 
@@ -71,14 +75,18 @@ class Report extends React.Component {
                                         </InputAdornment>
                                     }
                                 /><p>ФИО клиента</p></th>
-                            <th>Дата выезда</th>
-                            <th>Дата заезда</th>
-                            <th>Итого дней</th>
-                            <th>Цена за сутки</th>
-                            <th>Итого цена</th>
+                            <th>Дата</th>
+                            {/*<th>Дата заезда</th>*/}
+                            {/*<th>Итого дней</th>*/}
+                            {/*<th>Цена за сутки</th>*/}
+                            <th>Цена</th>
                             {/*<th>VIN номер</th>*/}
-                            <th>Номер машины</th>
-                            {/*<th>Марка</th>*/}
+                            {/*<th>Номер машины</th>*/}
+                            <th>Модель</th>
+                            <th>Производитель</th>
+                            <th>Цвет</th>
+                            <th>Год выпуска</th>
+                            <th>Тип</th>
                         </tr>
                         </thead>
                         <tbody>

@@ -37,8 +37,8 @@ class Cars extends React.Component {
                         <tr>
 
                             <th onClick={() => this.props.sortById(this.props.sortByIdBool)}>#</th>
-                            <th>VIN номер</th>
-                            <th>Номер</th>
+                            {/*<th>VIN номер</th>*/}
+                            {/*<th>Номер</th>*/}
                             <th>Модель</th>
                             <th>Производитель</th>
                             <th>Цена</th>
@@ -64,8 +64,8 @@ class Cars extends React.Component {
                                     <tr key={car.id}>
 
                                         <td>{car.id}</td>
-                                        <td>{car.carVIN}</td>
-                                        <td>{car.carNumber}</td>
+                                        {/*<td>{car.carVIN}</td>*/}
+                                        {/*<td>{car.carNumber}</td>*/}
                                         <td>{car.carModel}</td>
                                         <td>{car.carMake}</td>
                                         <td>{car.cost}</td>

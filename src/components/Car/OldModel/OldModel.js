@@ -27,19 +27,19 @@ class OldModel extends React.Component {
         } else
             return (
                 <div className="main">
-                    <div className="main__search">
-                        <InputLabel htmlFor="searchNumber"/>
-                        <Input
-                            className="search-in"
-                            placeholder={"Поиск по названию"}
-                            id="searchNumber"
-                            onChange={(e) => this.props.searchByName(e.target.value)}
-                            startAdornment={
-                                <InputAdornment position="end">
-                                    <SearchIcon/>
-                                </InputAdornment>
-                            }/>
-                    </div>
+                    {/*<div className="main__search">*/}
+                    {/*    <InputLabel htmlFor="searchNumber"/>*/}
+                    {/*    <Input*/}
+                    {/*        className="search-in"*/}
+                    {/*        placeholder={"Поиск по названию"}*/}
+                    {/*        id="searchNumber"*/}
+                    {/*        onChange={(e) => this.props.searchByName(e.target.value)}*/}
+                    {/*        startAdornment={*/}
+                    {/*            <InputAdornment position="end">*/}
+                    {/*                <SearchIcon/>*/}
+                    {/*            </InputAdornment>*/}
+                    {/*        }/>*/}
+                    {/*</div>*/}
                     {/*<button className="btn" onClick={() => history.push('/car/create')}>Добавить</button>*/}
                     <div className="main__content">
                         {this.props.cars.map(car => {

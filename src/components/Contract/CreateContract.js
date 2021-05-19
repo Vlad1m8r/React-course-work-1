@@ -17,7 +17,7 @@ class CreateContract extends React.Component {
         this.state = {
             number: null,
             dateStart: null,
-            dateEnd: null,
+            dateEnd: "2020-01-01",
             client: null,
             car: null,
         }
@@ -48,7 +48,7 @@ class CreateContract extends React.Component {
         this.setState({
             number: null,
             dateStart: null,
-            dateEnd: null,
+            dateEnd: "2020-01-01",
             client: null,
             car: null,
         })
@@ -69,7 +69,7 @@ class CreateContract extends React.Component {
         if (
             this.state.number == null ||
             this.state.dateStart == null ||
-            this.state.dateEnd == null ||
+            // this.state.dateEnd == null ||
             this.state.client == null ||
             this.state.car == null
         )
@@ -100,7 +100,7 @@ class CreateContract extends React.Component {
                         <Grid item xs={12} md={12} lg={12}>
                             <TextField
                                 variant="outlined"
-                                label="Дата выезда"
+                                label="Дата"
                                 fullWidth
                                 onChange={this.handleOnValueChange.bind(this)} id="dateStart"
                                 value={this.state.dateStart}
@@ -109,19 +109,19 @@ class CreateContract extends React.Component {
                                     shrink: true,
                                 }}/>
                         </Grid>
-                        <Grid item xs={12} md={12} lg={12}>
-                            <TextField
-                                variant="outlined"
-                                label="Дата заезда"
-                                fullWidth
-                                onChange={this.handleOnValueChange.bind(this)} id="dateEnd"
-                                value={this.state.dateEnd}
-                                placeholder="dateEnd" type="date"
-                                InputLabelProps={{
-                                    shrink: true,
-                                }}/>
+                        {/*<Grid item xs={12} md={12} lg={12}>*/}
+                        {/*    <TextField*/}
+                        {/*        variant="outlined"*/}
+                        {/*        label="Дата заезда"*/}
+                        {/*        fullWidth*/}
+                        {/*        onChange={this.handleOnValueChange.bind(this)} id="dateEnd"*/}
+                        {/*        value={this.state.dateEnd}*/}
+                        {/*        placeholder="dateEnd" type="date"*/}
+                        {/*        InputLabelProps={{*/}
+                        {/*            shrink: true,*/}
+                        {/*        }}/>*/}
 
-                        </Grid>
+                        {/*</Grid>*/}
                         <Grid item xs={12} md={12} lg={12}>
                             <select onChange={this.handleOnValueChange.bind(this)} id="car">
                                 <option disabled selected value> -- select an option --</option>
@@ -129,10 +129,10 @@ class CreateContract extends React.Component {
                                     return (
                                         <option
                                             fullWidth
-                                            id="client"
+                                            id="car"
                                             value={car.id}
                                             selected={(this.state?.car?.id === car.id) ? "selected" : false}>
-                                            {car.id} - {car.carNumber} {car.carModel} {car.carMake}</option>
+                                            {car.id} -  {car.carModel} {car.carMake}</option>
                                     )
                                 })
                                 }
